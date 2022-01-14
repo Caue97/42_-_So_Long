@@ -6,7 +6,7 @@
 #    By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/23 18:30:16 by felcaue-          #+#    #+#              #
-#    Updated: 2022/01/14 16:53:00 by felcaue-         ###   ########.fr        #
+#    Updated: 2022/01/14 17:07:50 by felcaue-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,10 @@ LDFLAGS		= -lXext -lX11
 LIB			= ar -rcs
 RM			= /bin/rm -rf
 
-LIBFT			=	library/Libft/libft.a
-LIBFT_PATH		=	library/Libft
-MINILIBX		=	library/Minilibx/libmlx.a
-MINILIBX_PATH	=	library/Minilibx
+LIBFT			=	Library/Libft/libft.a
+LIBFT_PATH		=	Library/Libft
+MINILIBX		=	Library/Minilibx/libmlx.a
+MINILIBX_PATH	=	Library/Minilibx
 
 DIRECTORY	=	Objs_solong
 
@@ -41,16 +41,13 @@ $(DIRECTORY)/%.o:	source_code/%.c
 					$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(DIRECTORY) $(OBJS) $(INCLUDE) $(LIBFT) $(MINILIBX)
-			$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(MINILIBX) $(GNL) $(LDFLAGS) -o $@
+			$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(MINILIBX) $(LDFLAGS) -o $@
 
 $(LIBFT):	
-			make -C library/Libft
+			make -C Library/Libft
 
 $(MINILIBX):
-			make -C library/Minilibx
-
-$(GNL):
-			make -C library/GNL
+			make -C Library/Minilibx
 
 $(DIRECTORY):	
 				mkdir -p $(DIRECTORY)
