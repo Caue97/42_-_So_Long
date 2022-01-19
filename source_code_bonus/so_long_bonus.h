@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 16:11:23 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/01/14 15:49:16 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/01/19 15:16:08 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
-# include "../library/Libft/libft.h"
-# include "../library/Minilibx/mlx.h"
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
+# include "../Library/Libft/libft.h"
+# include "../Library/Minilibx/mlx.h"
 
 # include <stdio.h>
 # include <stdlib.h>
