@@ -6,7 +6,7 @@
 /*   By: felcaue- <felcaue-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 16:11:23 by felcaue-          #+#    #+#             */
-/*   Updated: 2022/01/19 15:16:08 by felcaue-         ###   ########.fr       */
+/*   Updated: 2022/01/19 16:30:47 by felcaue-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,37 @@
 # define PLAYER_DOWN "assets/P_down.xpm"
 # define PLAYER_RIGHT "assets/P_right.xpm"
 
+# define PLAYER_DEAD "assets/Dead.xpm"
+
+# define ENEMY_UP "assets/S_up.xpm"
+# define ENEMY_LEFT "assets/S_left.xpm"
+# define ENEMY_DOWN "assets/S_down.xpm"
+# define ENEMY_RIGHT "assets/S_right.xpm"
+
+# define MOVE_BOARD_1 "assets/moves/Moves_01.xpm"
+# define MOVE_BOARD_2 "assets/moves/Moves_02.xpm"
+
+# define MOVE_SCORE_0 "assets/moves/Moves_03_0.xpm"
+# define MOVE_SCORE_1 "assets/moves/Moves_03_1.xpm"
+# define MOVE_SCORE_2 "assets/moves/Moves_03_2.xpm"
+# define MOVE_SCORE_3 "assets/moves/Moves_03_3.xpm"
+# define MOVE_SCORE_4 "assets/moves/Moves_03_4.xpm"
+# define MOVE_SCORE_5 "assets/moves/Moves_03_5.xpm"
+# define MOVE_SCORE_6 "assets/moves/Moves_03_6.xpm"
+# define MOVE_SCORE_7 "assets/moves/Moves_03_7.xpm"
+# define MOVE_SCORE_8 "assets/moves/Moves_03_8.xpm"
+# define MOVE_SCORE_9 "assets/moves/Moves_03_9.xpm"
+
+# define COL_A_01 "assets/animations/Collect_Anim_F01.xpm"
+# define COL_A_02 "assets/animations/Collect_Anim_F02.xpm"
+# define COL_A_03 "assets/animations/Collect_Anim_F03.xpm"
+# define COL_A_04 "assets/animations/Collect_Anim_F04.xpm"
+
+# define GOAL_A_01 "assets/animations/Goal_Anim_F01.xpm"
+# define GOAL_A_02 "assets/animations/Goal_Anim_F02.xpm"
+# define GOAL_A_03 "assets/animations/Goal_Anim_F03.xpm"
+# define GOAL_A_04 "assets/animations/Goal_Anim_F04.xpm"
+
 # define DEBUG_INFO 1
 
 /**
@@ -73,6 +104,12 @@ typedef struct s_game_data
 	void	*s_player_left;
 	void	*s_player_down;
 	void	*s_player_right;
+	void	*s_player_dead;
+	void	*s_enemy_init;
+	void	*s_enemy_up;
+	void	*s_enemy_left;
+	void	*s_enemy_down;
+	void	*s_enemy_right;
 	int		goal_x;
 	int		goal_y;
 	int		p_pos_x;
@@ -86,6 +123,22 @@ typedef struct s_game_data
 	int		n_collected;
 	int		collectable;
 	int		game_end;
+	int		game_win;
+	int		loops;
+	int		animations;
+	int		frame;
+	void	*m_board_1;
+	void	*m_board_2;
+	void	*m_score_0;
+	void	*m_score_1;
+	void	*m_score_2;
+	void	*m_score_3;
+	void	*m_score_4;
+	void	*m_score_5;
+	void	*m_score_6;
+	void	*m_score_7;
+	void	*m_score_8;
+	void	*m_score_9;
 }	t_game_data;
 
 typedef struct s_map_data
